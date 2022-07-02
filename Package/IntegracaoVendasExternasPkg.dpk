@@ -40,6 +40,7 @@ contains
   DAO.Controllers.Pedido in 'Source\DAO\Controllers\DAO.Controllers.Pedido.pas',
   DAO.Models.Pedidos in 'Source\DAO\Models\DAO.Models.Pedidos.pas',
   DAO.API.VendasExternas in 'Source\DAO\API\VendasExternas\DAO.API.VendasExternas.pas',
-  DAO.API.VendasExternas.Controllers.Pedido in 'Source\DAO\API\VendasExternas\Controllers\DAO.API.VendasExternas.Controllers.Pedido.pas';
+  DAO.API.VendasExternas.Controllers.Pedido in 'Source\DAO\API\VendasExternas\Controllers\DAO.API.VendasExternas.Controllers.Pedido.pas',
+  DAO.Models.VendasExternasConfiguracoes in 'Source\DAO\Models\DAO.Models.VendasExternasConfiguracoes.pas';
 
 end.
