@@ -67,3 +67,7 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+/Test/IntegracaoVendasExternasTest.res
+/Test/dunit.ini
+/Package/*.dproj
+/Package/IntegracaoVendasExternasPkg.res

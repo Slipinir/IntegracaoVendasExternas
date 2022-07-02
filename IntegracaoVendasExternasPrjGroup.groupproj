@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{D70CB89F-13ED-4A85-91D8-542790E238FF}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Test\IntegracaoVendasExternasTest.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="IntegracaoVendasExternasTest">
+			<MSBuild Projects="Test\IntegracaoVendasExternasTest.dproj"/>
+		</Target>
+		<Target Name="IntegracaoVendasExternasTest:Clean">
+			<MSBuild Targets="Clean" Projects="Test\IntegracaoVendasExternasTest.dproj"/>
+		</Target>
+		<Target Name="IntegracaoVendasExternasTest:Make">
+			<MSBuild Targets="Make" Projects="Test\IntegracaoVendasExternasTest.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="IntegracaoVendasExternasTest"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="IntegracaoVendasExternasTest:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="IntegracaoVendasExternasTest:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

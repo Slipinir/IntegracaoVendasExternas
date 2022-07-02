@@ -1,0 +1,45 @@
+package IntegracaoVendasExternasPkg;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  DAO.Models.Pedido in 'Source\DAO\Models\DAO.Models.Pedido.pas',
+  DAO.Models.PedidoItem in 'Source\DAO\Models\DAO.Models.PedidoItem.pas',
+  DAO.Models.PedidoItens in 'Source\DAO\Models\DAO.Models.PedidoItens.pas',
+  DAO.Models.Endereco in 'Source\DAO\Models\DAO.Models.Endereco.pas',
+  DAO.Models.Telefone in 'Source\DAO\Models\DAO.Models.Telefone.pas',
+  DAO.Models.ClienteTipo in 'Source\DAO\Models\DAO.Models.ClienteTipo.pas',
+  DAO.Models.Documentos in 'Source\DAO\Models\DAO.Models.Documentos.pas',
+  DAO.Models.PedidoDados in 'Source\DAO\Models\DAO.Models.PedidoDados.pas',
+  DAO.Models.PedidoCliente in 'Source\DAO\Models\DAO.Models.PedidoCliente.pas',
+  DAO.Controllers.Pedido in 'Source\DAO\Controllers\DAO.Controllers.Pedido.pas',
+  DAO.Models.Pedidos in 'Source\DAO\Models\DAO.Models.Pedidos.pas',
+  DAO.API.VendasExternas in 'Source\DAO\API\VendasExternas\DAO.API.VendasExternas.pas',
+  DAO.API.VendasExternas.Controllers.Pedido in 'Source\DAO\API\VendasExternas\Controllers\DAO.API.VendasExternas.Controllers.Pedido.pas';
+
+end.
