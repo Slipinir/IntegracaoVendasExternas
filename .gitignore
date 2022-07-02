@@ -69,5 +69,5 @@ __recovery/
 modules/
 /Test/IntegracaoVendasExternasTest.res
 /Test/dunit.ini
-/Package/*.dproj
 /Package/IntegracaoVendasExternasPkg.res
+*.dproj

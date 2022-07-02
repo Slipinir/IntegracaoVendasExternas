@@ -6,6 +6,12 @@
 			<Projects Include="Test\IntegracaoVendasExternasTest.dproj">
 				<Dependencies/>
 			</Projects>
+			<Projects Include="Package\IntegracaoVendasExternasPkg.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Main\Integrador.dproj">
+				<Dependencies/>
+			</Projects>
 		</ItemGroup>
 		<ProjectExtensions>
 			<Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +29,32 @@
 		<Target Name="IntegracaoVendasExternasTest:Make">
 			<MSBuild Targets="Make" Projects="Test\IntegracaoVendasExternasTest.dproj"/>
 		</Target>
+		<Target Name="IntegracaoVendasExternasPkg">
+			<MSBuild Projects="Package\IntegracaoVendasExternasPkg.dproj"/>
+		</Target>
+		<Target Name="IntegracaoVendasExternasPkg:Clean">
+			<MSBuild Targets="Clean" Projects="Package\IntegracaoVendasExternasPkg.dproj"/>
+		</Target>
+		<Target Name="IntegracaoVendasExternasPkg:Make">
+			<MSBuild Targets="Make" Projects="Package\IntegracaoVendasExternasPkg.dproj"/>
+		</Target>
+		<Target Name="Integrador">
+			<MSBuild Projects="Main\Integrador.dproj"/>
+		</Target>
+		<Target Name="Integrador:Clean">
+			<MSBuild Targets="Clean" Projects="Main\Integrador.dproj"/>
+		</Target>
+		<Target Name="Integrador:Make">
+			<MSBuild Targets="Make" Projects="Main\Integrador.dproj"/>
+		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="IntegracaoVendasExternasTest"/>
+			<CallTarget Targets="IntegracaoVendasExternasTest;IntegracaoVendasExternasPkg;Integrador"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="IntegracaoVendasExternasTest:Clean"/>
+			<CallTarget Targets="IntegracaoVendasExternasTest:Clean;IntegracaoVendasExternasPkg:Clean;Integrador:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="IntegracaoVendasExternasTest:Make"/>
+			<CallTarget Targets="IntegracaoVendasExternasTest:Make;IntegracaoVendasExternasPkg:Make;Integrador:Make"/>
 		</Target>
 		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 	</Project>
